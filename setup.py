@@ -6,8 +6,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="epd",
-    version="0.0.0",
+    name="epd-library",
+    version="0.1.2",
     author="t4skforce",
     author_email="7422037+t4skforce@users.noreply.github.com",
     description="GDEP015OC1 e-paper for raspberry pi (Waveshare 1.54inch e-paper)",

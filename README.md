@@ -41,7 +41,7 @@ The original code is provided by [Waveshare GitHub](https://github.com/soonuse/e
   * BUSY   ->    18 (Physical, BCM: 24)
 ## How to use
 1.  install libraries required libraries and demos via 
-    <pre>pip install</pre>
+    <pre>pip install epd-library</pre>
 2.  run the demo with: 
   * 1.54inch e-paper
     <pre>epd1in54</pre>
