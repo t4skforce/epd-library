@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='epd2in13',
-      version='0.1',
+      version='0.1.0',
       description='2.13inch e-Paper HAT - Implements for e-paper library',
       url='https://github.com/t4skforce/edp2in13',
       author='Yehui from Waveshare',
