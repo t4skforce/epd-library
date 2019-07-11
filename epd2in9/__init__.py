@@ -1,5 +1,5 @@
 ##
- #  @filename   :   epd2in13.py
+ #  @filename   :   epd2in9.py
  #  @brief      :   Implements for e-paper library
  #  @author     :   Yehui from Waveshare
  #
@@ -24,15 +24,15 @@
  # THE SOFTWARE.
  #
 
-from epd2in13 import epdif
+from epd2in9 import epdif
 from PIL import Image
 import RPi.GPIO as GPIO
 
 # Display resolution
 EPD_WIDTH       = 128
-EPD_HEIGHT      = 250
+EPD_HEIGHT      = 296
 
-# EPD2IN13 commands
+# EPD2IN9 commands
 DRIVER_OUTPUT_CONTROL                       = 0x01
 BOOSTER_SOFT_START_CONTROL                  = 0x0C
 GATE_SCAN_START_POSITION                    = 0x0F
@@ -65,16 +65,16 @@ class EPD:
         self.lut = self.lut_full_update
 
     lut_full_update = [
-        0x22, 0x55, 0xAA, 0x55, 0xAA, 0x55, 0xAA, 0x11,
-        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-        0x1E, 0x1E, 0x1E, 0x1E, 0x1E, 0x1E, 0x1E, 0x1E,
-        0x01, 0x00, 0x00, 0x00, 0x00, 0x00
+        0x02, 0x02, 0x01, 0x11, 0x12, 0x12, 0x22, 0x22, 
+        0x66, 0x69, 0x69, 0x59, 0x58, 0x99, 0x99, 0x88, 
+        0x00, 0x00, 0x00, 0x00, 0xF8, 0xB4, 0x13, 0x51, 
+        0x35, 0x51, 0x51, 0x19, 0x01, 0x00
     ]
 
     lut_partial_update  = [
-        0x18, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-        0x0F, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x10, 0x18, 0x18, 0x08, 0x18, 0x18, 0x08, 0x00, 
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+        0x00, 0x00, 0x00, 0x00, 0x13, 0x14, 0x44, 0x12, 
         0x00, 0x00, 0x00, 0x00, 0x00, 0x00
     ]
 
@@ -190,16 +190,16 @@ class EPD:
         else:
             y_end = y + image_height - 1
         self.set_memory_area(x, y, x_end, y_end)
+        self.set_memory_pointer(x, y)
+        self.send_command(WRITE_RAM)
         # send the image data
         pixels = image_monocolor.load()
         byte_to_send = 0x00
-        for j in range(y, y_end + 1):
-            self.set_memory_pointer(x, j)
-            self.send_command(WRITE_RAM)
+        for j in range(0, y_end - y + 1):
             # 1 byte = 8 pixels, steps of i = 8
-            for i in range(x, x_end + 1):
+            for i in range(0, x_end - x + 1):
                 # Set the bits for the column of pixels at the current position.
-                if pixels[i - x, j - y] != 0:
+                if pixels[i, j] != 0:
                     byte_to_send |= 0x80 >> (i % 8)
                 if (i % 8 == 7):
                     self.send_data(byte_to_send)
@@ -214,7 +214,7 @@ class EPD:
         self.set_memory_pointer(0, 0)
         self.send_command(WRITE_RAM)
         # send the color data
-        for i in range(0, int(self.width / 8 * self.height)):
+        for i in range(0, self.width / 8 * self.height):
             self.send_data(color)
 
 ##
