@@ -10,7 +10,7 @@ setuptools.setup(
     version="0.2.0",
     author="t4skforce",
     author_email="7422037+t4skforce@users.noreply.github.com",
-    description="GDEP015OC1 e-paper for raspberry pi (Waveshare 1.54inch e-paper)",
+    description="e-paper for raspberry pi (Waveshare e-paper)",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/t4skforce/epd-library-python",
