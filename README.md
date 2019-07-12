@@ -84,8 +84,8 @@ Standard Raspberry Pi header on module, allowed to be attached onto Pi directly,
 * GDEW029Z10 - [2.9" e-paper display (B) library for Raspberry Pi](https://www.waveshare.com/wiki/2.9inch_e-Paper_Module_(B)) - epd2in9b
 * GDEW042T2 - [4.2" e-paper display library for Raspberry Pi](https://www.waveshare.com/wiki/4.2inch_e-Paper_Module) - epd4in2
 * GDEW042Z15 - [4.2" e-paper display (B) library for Raspberry Pi](https://www.waveshare.com/wiki/4.2inch_e-Paper_Module_(B)) - epd4in2b
-* GDEW075T8 - [7.5" e-paper display library for Raspberry Pi](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT)
-* GDEW075Z09 - [7.5" e-paper display (B) library for Raspberry Pi](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_(B))
+* GDEW075T8 - [7.5" e-paper display library for Raspberry Pi](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT) - epd7in5
+* GDEW075Z09 - [7.5" e-paper display (B) library for Raspberry Pi](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_(B)) - epd7in5b
 
 ![e-paper display](http://www.waveshare.com/img/devkit/general/e-Paper-Modules-CMP.jpg)
 # Interfaces
