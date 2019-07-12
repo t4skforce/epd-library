@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="epd-library",
-    version="0.2.0",
+    version="0.2.1",
     author="t4skforce",
     author_email="7422037+t4skforce@users.noreply.github.com",
     description="e-paper for raspberry pi (Waveshare e-paper)",
