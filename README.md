@@ -1,7 +1,7 @@
 # Python libraries for Waveshare e-paper series
 Python libraries for Waveshare e-paper series
 # About
-This repo was created to provide a convenient way to install GDEM0213E26LT e-paper library for Raspberry Pi.
+This repo was created to provide a convenient way to install e-paper library for Raspberry Pi.
 The original code is provided by [Waveshare GitHub](https://github.com/soonuse/epd-library-python).
 ## Raspberry Pi GPIO Pin map 
     +-----+-----+---------+------+---+---Pi 3---+---+------+---------+-----+-----+
@@ -70,7 +70,23 @@ The original code is provided by [Waveshare GitHub](https://github.com/soonuse/e
   * 7.5inch e-paper b
     <pre>epd7in5b</pre>
 ## Supported models
-1.54"/1.54" B/2.13"/2.13" B/2.7"/2.7" B/2.9"/2.9" B/4.2"/4.2 B/7.5"/ 7.5" B
+
+Standard Raspberry Pi header on module, allowed to be attached onto Pi directly, compatible with Raspberry Pi 40PIN GPIO extension header
+
+* GDEP015OC1 - [e-paper library for Raspberry Pi](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module) - epd1in54
+* GDEW0154Z04 - [e-paper library for Raspberry Pi](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module_(B)) - epd1in54b
+* [1.54inch e-Paper Module (C)](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module_(C)) - epd1in54c
+* GDEM0213E26LT - [2.13" e-paper library for Raspberry Pi](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT) - epd2in13
+* GDEW0213Z16 - [2.13" e-paper display (B) library for Raspberry Pi](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT_(B)) - epd2in13b
+* GDEW027W3 - [2.7" e-paper library for Raspberry Pi](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT) - epd2in7
+* GDEW027C44 - [2.7" e-paper display (B) library for Raspberry Pi](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT_(B)) - epd2in7b
+* GDEH029A1 - [2.9" e-paper display library for Raspberry Pi](https://www.waveshare.com/wiki/2.9inch_e-Paper_Module) - epd2in9
+* GDEW029Z10 - [2.9" e-paper display (B) library for Raspberry Pi](https://www.waveshare.com/wiki/2.9inch_e-Paper_Module_(B)) - epd2in9b
+* GDEW042T2 - [4.2" e-paper display library for Raspberry Pi](https://www.waveshare.com/wiki/4.2inch_e-Paper_Module) - epd4in2
+* GDEW042Z15 - [4.2" e-paper display (B) library for Raspberry Pi](https://www.waveshare.com/wiki/4.2inch_e-Paper_Module_(B)) - epd4in2b
+* GDEW075T8 - [7.5" e-paper display library for Raspberry Pi](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT)
+* GDEW075Z09 - [7.5" e-paper display (B) library for Raspberry Pi](https://www.waveshare.com/wiki/7.5inch_e-Paper_HAT_(B))
+
 ![e-paper display](http://www.waveshare.com/img/devkit/general/e-Paper-Modules-CMP.jpg)
 # Interfaces
 | Name | Description                                                   |
@@ -83,3 +99,6 @@ The original code is provided by [Waveshare GitHub](https://github.com/soonuse/e
 | DC   | Data/Command control pin (High for data, and low for command) |
 | RST  | External reset pin (Low for reset)                            |
 | BUSY | Busy state output pin (Low for busy)                          |
+
+
+
