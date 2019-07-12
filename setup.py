@@ -13,7 +13,7 @@ setuptools.setup(
     description="e-paper for raspberry pi (Waveshare e-paper)",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/t4skforce/epd-library-python",
+    url="https://github.com/t4skforce/epd-library",
     entry_points={'console_scripts': [
         'epd1in54=epd1in54.__main__:main',
         'epd1in54b=epd1in54b.__main__:main',
